@@ -7,4 +7,10 @@
     <RootNamespace>csharp_expenses_tracker_ui</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.8" />
+    <PackageReference Include="Microsoft.SqlServer.Server" Version="1.0.0" />
+  </ItemGroup>
+
 </Project>

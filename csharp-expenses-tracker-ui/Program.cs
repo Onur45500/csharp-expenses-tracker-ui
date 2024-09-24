@@ -1,3 +1,6 @@
+using csharp_expenses_tracker_ui.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace csharp_expenses_tracker_ui
 {
     public class Program
@@ -8,6 +11,11 @@ namespace csharp_expenses_tracker_ui
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+            {
+                options.UseInMemoryDatabase("ExpensesDb");
+            });
 
             var app = builder.Build();
 
