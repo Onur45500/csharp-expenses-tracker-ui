@@ -14,7 +14,7 @@ namespace csharp_expenses_tracker_ui
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             {
-                options.UseInMemoryDatabase("ExpensesDb");
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection"));
             });
 
             var app = builder.Build();
